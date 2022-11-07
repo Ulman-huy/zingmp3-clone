@@ -1,0 +1,48 @@
+@import '../root.css';
+
+.searchHistory {
+    position: absolute;
+    top: 40px;
+    padding: 12px 0px 12px 20px;
+    color: var(--while);
+    background-color: var(--primary-bg);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 100%;
+    .title {
+        font-size: 14px;
+        font-weight: 700;
+    }
+    .listSong {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        margin-top: 8px;
+        .itemSong {
+            list-style: none;
+            width: 100%;
+            margin: 0 -8px;
+            padding: 0 8px;
+            &:hover {
+                background-color: var(--hover-item);
+                border-radius: 8px;
+            }
+            a { 
+                display: block;
+                width: 100%;
+                color: var(--while);
+                font-size: 14px;
+                text-decoration: none;
+                padding: 8px 10px;
+                margin-left: -10px;
+                svg {
+                    color: var(--text-placeholder);
+                }
+                span {
+                    margin-left: 8px;
+                }
+            }
+            
+        }
+    }
+}

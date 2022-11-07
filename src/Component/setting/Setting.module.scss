@@ -1,0 +1,63 @@
+@import '../root.css';
+
+.setting {
+    position: absolute;
+    top: 48px;
+    right: 0px;
+    .container {
+        background-color: var(--primary-bg);
+        width: 240px;
+        border-radius: 10px;
+        padding-top: 10px;
+        box-shadow: 2px 2px var(--dark-alpha-10);
+        .slice {
+            width: 240px;
+            height: 1px;
+            background-color: var(--slicebar-device);
+            margin: 10px 0;
+        }
+        .listBlack {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            white-space: nowrap;
+            color: var(--navigation-text);
+            &.logout {
+                padding-bottom: 8px;
+            }
+            &.text {
+                color: var(--text-placeholder);
+            }
+            .link {
+                display: flex;
+                align-items: center;
+                font-size: 14px !important;
+                text-decoration: none;
+                width: 100%;
+                .icon {
+                    width: 40px;
+                    height: 40px;
+                    margin-right: 12px;
+                    display: flex;
+                    align-items:center;
+                    &.mr {
+                        margin-left: 18px !important;
+                        margin-right: -6px !important;
+                    }
+                } 
+                svg {
+                    font-size: 16px;
+                }
+                &:hover {
+                    background-color: var(--hover-item);
+                    color: var(--navigation-text);
+                }
+            }
+            div {
+                svg {
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+}

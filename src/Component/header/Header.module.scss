@@ -1,0 +1,166 @@
+@import '../root.css';
+
+.header {
+    height: 70px;
+    width: 100%;
+    background-color: var(--layout-bg);
+    .container {
+        margin: 15px 0;
+        display: flex;
+        justify-content: space-between;
+        .headerLeft {
+            display: flex;
+            .btnHistory{
+                margin-left: -8px;
+                .btn {
+                    &.disable {
+                        color: var(--slicebar-device);
+                    }
+                    background-color: var(--layout-bg);
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 100%;
+                    font-size: 22px;
+                    color: var(--navigation-text);
+                    border: none;
+                    cursor: pointer;
+                    
+                }
+                .btn:last-child {
+                    margin-left: 4px;
+                }
+            }
+            .search {
+                display: flex;
+                align-items: center;
+                height: 40px;
+                width: 540px;
+                font-size: 20px;
+                color: var(--navigation-text);
+                margin-left: 12px;
+                .searchContainer {
+                    display: flex;
+                    width: 100%;
+                    border-radius: 50px;
+                    background-color: var(--hover-item);
+                    position: relative;
+                    border-bottom-left-radius: 50px;
+                    border-top-left-radius: 50px;
+                    border-bottom-right-radius: 50px;
+                    border-top-right-radius: 50px;
+                    &.focus {
+                        border-bottom-left-radius: 0;
+                        border-bottom-right-radius: 0;
+                        border-top-left-radius: 20px;
+                        border-top-right-radius: 20px;
+                        background-color: var(--primary-bg);
+                        .searchInput {
+                            background-color: var(--primary-bg);
+                        }
+                        .searchIcon {
+                            background-color: var(--primary-bg);
+                        }
+                    }
+                    .searchInput {
+                        border-bottom-right-radius: 50px;
+                        border-top-right-radius: 50px;
+                        width: 100%;
+                        height: 40px;
+                        background-color: var(--hover-item);
+                        outline: none;
+                        border: none;
+                        color: var(--while);
+                        font-size: 14px;
+                        &::placeholder {
+                            color: var(--navigation-text);
+                        }
+                        
+                        
+                    }
+                    .searchIcon {
+                        border-bottom-left-radius: 20px;
+                        border-top-left-radius: 20px;
+                        background-color: var(--hover-item);
+                        width: 40px;
+                        height: 40px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+        .headerRight {
+            display: flex;
+            margin-right: -6px;
+
+            .btn {
+                a {
+                    color: var(--while);
+                    svg {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 100%;
+                        padding: 12px;
+                        margin: 0 5px;
+                        cursor: pointer;
+                        position: relative; 
+                    }
+                    font-size: 16px;
+                }
+                width: 40px;
+                height: 40px;
+                background-color: var(--hover-item);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 100%;
+                margin: 0 5px;
+                cursor: pointer;
+                font-size: 16px;
+                position: relative;
+                &[title]:hover::after{
+                    content: attr(title);
+                    position: absolute;
+                    bottom: -30px;
+                    font-size: 11px;
+                    padding: 2px 8px;
+                    white-space: nowrap;
+                    text-align: center;
+                    border-radius: 4px;
+                    background-color: var(--slicebar-device);
+                    z-index: 10;
+                    opacity: 1;
+                }
+                &[title]:hover::before{
+                    position: absolute;
+                    bottom: -18px;
+                    content: "";
+                    border-left: 16px solid transparent;
+                    border-right: 16px solid transparent;
+                    border-bottom: 16px solid var(--slicebar-device);
+                    z-index: 10;
+                    opacity: 1;
+                }
+                &[title]::after {
+                    opacity: 0;
+                }
+                .avatar {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 100px;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    overflow: hidden;
+                }
+                input {
+                    display: none;
+                    background-size:contain;
+                    background-repeat: no-repeat;
+                }
+
+            }
+        }
+    }
+}
